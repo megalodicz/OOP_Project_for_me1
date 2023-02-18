@@ -1,6 +1,5 @@
 import time
 import streamlit as st
-from sklearn import *
 from PIL import Image
 import pandas as pd
 import numpy as np
