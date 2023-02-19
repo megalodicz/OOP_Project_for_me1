@@ -117,7 +117,7 @@ if ot == 'Home':
             'More option?',
             ('Family', 'Trunk', 'Sport Car'))
         op.append(option)
-        st.caption('Ex : Horse Power < 250 = Family :Car Seat > 4 = Trunk : Horse Power > 500 = Sport Car')
+        st.caption('Ex : Horse Power < 250 = Family : Car Seat > 4 = Trunk : Horse Power > 500 = Sport Car')
 
         realpre = clf.predict(pred2)
         if st.button('Submit'):
