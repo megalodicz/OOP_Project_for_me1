@@ -104,9 +104,9 @@ if ot == 'Home':
 
         cols = st.columns(2)
         with cols[0]:
-            number = st.number_input('Start Horse Power', min_value=1)
+            number = st.number_input('Start Horse Power', min_value=1,max_value=1500)
         with cols[1]:
-            number1 = st.number_input('How many seat', min_value=1)
+            number1 = st.number_input('How many seat', min_value=1,max_value=8)
 
         x = (number, number1)
         pred1 = np.asarray(x)
@@ -117,7 +117,7 @@ if ot == 'Home':
             'More option?',
             ('Family', 'Trunk', 'Sport Car'))
         op.append(option)
-        st.caption('Ex : Horse Power < 250 = Family : Car Seat > 4 = Trunk : Horse Power > 500 = Sport Car')
+        st.caption('Ex : Horse Power < 250 = Family : Car Seat > 4 = Trunk : Horse Power > 500 = Sport Car : Car Seat < 4')
 
         realpre = clf.predict(pred2)
         if st.button('Submit'):
@@ -177,7 +177,7 @@ if ot == 'Home':
 
         cols = st.columns(2)
         with cols[0]:
-            number = st.number_input('Start CC Power', min_value=1)
+            number = st.number_input('Start CC Power', min_value=50,max_value=1000)
         opt = []
         with cols[1]:
             optiont = st.selectbox(
